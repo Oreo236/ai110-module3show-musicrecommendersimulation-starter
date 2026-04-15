@@ -1,19 +1,19 @@
-id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
-1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18
-2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71
-3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10
-4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86
-5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05
-6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92
-7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89
-8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
-9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
-10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
-11,Block Party Anthem,The Grid Collective,hip-hop,energetic,0.85,95,0.72,0.88,0.08
-12,Velvet Sunrise,Mara Souls,r&b,romantic,0.55,85,0.78,0.71,0.42
-13,Morning Cloister,Elara String Quartet,classical,peaceful,0.18,68,0.62,0.22,0.97
-14,Neon Overload,DJ Flux,edm,euphoric,0.96,128,0.90,0.94,0.03
-15,Dusty Highway,The Tumbleweed Three,country,nostalgic,0.52,96,0.68,0.65,0.72
-16,Empty Porch,Birchwood June,folk,melancholic,0.30,74,0.38,0.45,0.88
-17,Iron Curtain Fall,Wraith Engine,metal,angry,0.97,168,0.32,0.55,0.04
-18,Rise Up Sunday,Della Grace,soul,uplifting,0.68,102,0.88,0.76,0.55
+id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness,popularity,release_decade,detailed_mood,instrumentalness,liveness
+1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18,78,2010,euphoric,0.05,0.08
+2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71,55,2020,focused,0.82,0.06
+3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10,65,1990,aggressive,0.12,0.18
+4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86,48,2020,peaceful,0.88,0.04
+5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05,82,2010,motivational,0.04,0.07
+6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92,42,2020,dreamy,0.91,0.03
+7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89,60,1990,nostalgic,0.38,0.42
+8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22,58,2010,melancholic,0.22,0.09
+9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78,50,2020,focused,0.85,0.05
+10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35,71,2010,uplifting,0.08,0.12
+11,Block Party Anthem,The Grid Collective,hip-hop,energetic,0.85,95,0.72,0.88,0.08,80,2010,euphoric,0.06,0.15
+12,Velvet Sunrise,Mara Souls,r&b,romantic,0.55,85,0.78,0.71,0.42,66,2000,romantic,0.10,0.22
+13,Morning Cloister,Elara String Quartet,classical,peaceful,0.18,68,0.62,0.22,0.97,38,1980,peaceful,0.95,0.10
+14,Neon Overload,DJ Flux,edm,euphoric,0.96,128,0.90,0.94,0.03,88,2010,euphoric,0.15,0.04
+15,Dusty Highway,The Tumbleweed Three,country,nostalgic,0.52,96,0.68,0.65,0.72,52,1980,nostalgic,0.28,0.35
+16,Empty Porch,Birchwood June,folk,melancholic,0.30,74,0.38,0.45,0.88,40,2000,melancholic,0.45,0.40
+17,Iron Curtain Fall,Wraith Engine,metal,angry,0.97,168,0.32,0.55,0.04,62,1990,aggressive,0.18,0.20
+18,Rise Up Sunday,Della Grace,soul,uplifting,0.68,102,0.88,0.76,0.55,70,2000,uplifting,0.12,0.48
