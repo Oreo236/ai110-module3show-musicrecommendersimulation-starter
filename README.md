@@ -16,16 +16,27 @@ Replace this paragraph with your own summary of what your version does.
 ---
 
 ## How The System Works
-
 Explain your design in plain language.
+Real-world recommenders like Spotify combine two strategies: collaborative filtering (learning from what millions of similar users played) and content-based filtering (matching songs by their audio attributes). This  focuses entirely on content-based filtering: no play history, no user comparisons, just a direct match between a song's measurable traits and a user's stated preferences.
 
 Some prompts to answer:
 
 - What features does each `Song` use in your system
   - For example: genre, mood, energy, tempo
+  - genre, mood, energy, acousticness, valence, tempo_bpm and danceability
 - What information does your `UserProfile` store
+  - favorite genre, favorite mood, energy and likes acoustic
 - How does your `Recommender` compute a score for each song
+  - score = genre_match × 3.0
+      + mood_match  × 2.5
+      + (1 - |song.energy - user.target_energy|²)       × 2.0
+      + (1 - |song.acousticness - user.target_acoustic|²) × 1.5
+      + (1 - |song.valence - 0.70|²)                    × 0.5
+      Features such as genre and mood are an exact match. Other features use a squared proximity formula so scores of 1.0 for a perfect match, curving steeply down as distance grows. Maximum possible score is 9.5.
+      One bias that I realized from what the ai gave me was that the valence term uses a hardcoded target of 0.7, meaning the system always steers toward moderately positive songs regardless of what the user actually wants. A user who prefers dark or melancholic music will be silently penalized, since they have no way to set their own valence preference.
 - How do you choose which songs to recommend
+ - Every song in the catalog/ song file would be scored, then sorted, and the top k songs with their scores and explanations will be recommended.
+
 
 You can include a simple diagram or bullet list if helpful.
 

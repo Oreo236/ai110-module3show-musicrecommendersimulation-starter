@@ -1,0 +1,30 @@
+flowchart TD
+    A([User Preferences\ngenre · mood · energy · likes_acoustic])
+    B([data/songs.csv · 18 songs])
+
+    A --> REC
+    B --> LOAD[load_songs\nparse CSV rows into dicts]
+    LOAD --> REC
+
+    REC[recommend_songs\nloop over every song in catalog]
+    REC --> SCORE
+
+    subgraph SCORE["score_song(user_prefs, song)"]
+        direction TB
+        S1["genre match? · +3.0 if exact, else 0"]
+        S2["mood match? · +2.5 if exact, else 0"]
+        S3["energy proximity\n1 − |song.energy − user.energy|² × 2.0"]
+        S4["acousticness proximity\n1 − |song.acoustic − target|² × 1.5"]
+        S5["valence proximity\n1 − |song.valence − 0.70|² × 0.5"]
+        SUM["sum all terms · max = 9.5"]
+        REASONS["collect reason strings"]
+        S1 & S2 & S3 & S4 & S5 --> SUM
+        SUM --> REASONS
+    end
+
+    REASONS --> COLLECT["append song, score, reasons\nto scored list"]
+    COLLECT --> MORE{"more songs?"}
+    MORE -- yes --> SCORE
+    MORE -- no --> SORT["sort by score descending"]
+    SORT --> TOPK["take top k"]
+    TOPK --> OUT["output: title · score · explanation"]
